@@ -1,0 +1,232 @@
+.modal-card__body {
+  max-width: 690px;
+}
+
+.modal-card__card {
+  padding: 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+  display: flex;
+  margin: 0 0 30px;
+}
+
+.modal-card__card-img-block {
+  width: 140px;
+  height: 140px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.modal-card__card-name {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  color: $text-main;
+  margin: 0 0 20px;
+}
+
+.modal-card__card-link {
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: normal;
+  display: inline-block;
+  padding: 14px 40px 16px;
+  border: 1px solid #eeeeee;
+  border-radius: 5px;
+  color: $text-main;
+  transition: color 0.2s;
+  text-align: center;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
+.modal-card__card-content + .modal-card__card-link {
+  display: none;
+}
+
+.modal-card__benefits {
+  display: flex;
+  margin: 0 0 30px;
+}
+
+.modal-card__benefit-item {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  line-height: 23px;
+  color: $text-main;
+  margin-right: 15px;
+  width: 100%;
+  max-width: 230px;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    color: #323232;
+  }
+}
+
+.modal-card__benefit-label {
+  width: 124px;
+  padding: 5px 10px;
+  font-size: 13px;
+  line-height: 15px;
+  font-weight: 400;
+  color: #eb5757;
+  background-color: #ffebeb;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: 17px;
+}
+
+.modal-card__desc-block {
+  margin: 0 0 30px;
+}
+
+.modal-card__desc-title {
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 300;
+  color: $text-main;
+  margin: 0 0 15px;
+}
+
+.modal-card__desc-text {
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  color: $text-main;
+  margin: 0;
+}
+
+.modal-card__detailed {
+  margin: 0 0 30px;
+}
+
+.modal-card__detailed-text {
+  display: block;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 300;
+  color: $text-main;
+  margin: 0 0 5px;
+}
+
+.modal-card__detailed-phone {
+  font-size: 19px;
+  line-height: 23px;
+  font-weight: 300;
+  color: $primary;
+}
+
+.modal-card__title-img {
+  height: 180px;
+  width: calc(100% + 56px);
+  transform: translate(-28px, -28px);
+  background-image: url("../img/gift.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 690px auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@include mobile {
+  .modal-card__body {
+    max-width: none;
+    width: 100%;
+  }
+
+  .modal-card__card {
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .modal-card__card-content + .modal-card__card-link {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .modal-card__card-content {
+    .modal-card__card-link {
+      display: none;
+    }
+  }
+
+  .modal-card__card-name {
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0;
+  }
+
+  .modal-card__card-img-block {
+    width: 80px;
+    height: 80px;
+  }
+
+  .modal-card__card-content {
+    width: calc(100% - 100px);
+  }
+
+  .modal-card__benefits {
+    flex-direction: column;
+  }
+
+  .modal-card__benefit-item {
+    margin: 0 0 15px;
+  }
+
+  .modal-card__benefit-label {
+    width: auto;
+    margin: 0;
+    align-self: flex-start;
+  }
+
+  .modal-card__desc-title {
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+
+  .modal-card__desc-text {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .modal-card__detailed-text {
+    font-size: 13px;
+    line-height: 19px;
+  }
+
+  .modal-card__detailed-phone {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .modal-card__body.top-image {
+    padding-top: 190px;
+  }
+
+  .modal-card__title-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 160px;
+    width: 100%;
+    transform: none;
+    background-size: cover;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
